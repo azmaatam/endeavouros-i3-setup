@@ -1,0 +1,36 @@
+# Window manager and desktop
+i3-wm
+i3blocks
+i3status
+polybar
+picom
+rofi
+kitty
+dunst
+feh
+i3lock
+xss-lock
+
+# Desktop utilities
+flameshot
+brightnessctl
+playerctl
+pavucontrol
+network-manager-applet
+bluez-utils
+libpulse
+libnotify
+xorg-xrandr
+
+# Hardware monitoring and power
+acpi
+sysstat
+lm_sensors
+
+# Fonts
+noto-fonts
+noto-fonts-emoji
+ttf-dejavu
+ttf-jetbrains-mono-nerd
+adobe-source-code-pro-fonts
+woff2-font-awesome

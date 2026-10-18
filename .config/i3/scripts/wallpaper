@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+WALLPAPER_DIR="${WALLPAPER_DIR:-$HOME/Pictures/Wallpapers}"
+
+if ! command -v feh >/dev/null 2>&1; then
+    exit 0
+fi
+
+if [[ ! -d "$WALLPAPER_DIR" ]]; then
+    exit 0
+fi
+
+mapfile -d '' wallpapers < <(
+    find "$WALLPAPER_DIR" -maxdepth 1 -type f \
+        \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
+        -o -iname '*.webp' -o -iname '*.bmp' \) \
+        -print0
+)
+
+if [[ "${#wallpapers[@]}" -eq 0 ]]; then
+    exit 0
+fi
+
+index=$(od -An -N4 -tu4 /dev/urandom | tr -d ' ')
+index=$((index % ${#wallpapers[@]}))
+
+feh --bg-fill "${wallpapers[$index]}"

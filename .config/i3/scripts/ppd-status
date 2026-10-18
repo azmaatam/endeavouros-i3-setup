@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -u
+
+if ! command -v powerprofilesctl >/dev/null 2>&1; then
+    echo "Power profile: N/A"
+    exit 0
+fi
+
+if ! current_profile=$(powerprofilesctl get 2>/dev/null); then
+    echo "Power profile: unavailable"
+    exit 0
+fi
+
+case "$current_profile" in
+    performance) echo "Performance" ;;
+    balanced)    echo "Balanced" ;;
+    power-saver) echo "Power saver" ;;
+    *)           echo "$current_profile" ;;
+esac

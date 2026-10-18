@@ -1,0 +1,7 @@
+# Optional: Google Drive helper scripts
+# Requires:
+#   ~/.local/bin/mount-gdrive.sh
+#   ~/.local/bin/unmount-gdrive.sh
+
+bindsym $mod+m exec --no-startup-id ~/.local/bin/mount-gdrive.sh
+bindsym $mod+Shift+f exec --no-startup-id ~/.local/bin/unmount-gdrive.sh

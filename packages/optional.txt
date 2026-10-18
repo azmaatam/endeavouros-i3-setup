@@ -1,0 +1,9 @@
+# Tambahkan aplikasi pribadi setelah audit:
+# kate
+# thunar
+# obsidian
+# virtualbox
+# spotify
+# code
+# Optional power management
+power-profiles-daemon

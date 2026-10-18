@@ -1,0 +1,24 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+token.json
+
+# Local machine data and editor files
+.DS_Store
+*.log
+*.bak
+*.swp
+*~
+
+# Runtime wallpaper state
+.config/rofi/.current_wallpaper
+
+# Personal cloud mount data
+GoogleDrive/
+
+# Local backup directories
+backups/
